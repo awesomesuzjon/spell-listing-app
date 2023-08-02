@@ -12,7 +12,7 @@ const SpellList: React.FC = () => {
             setSpells(allSpells);
         };
 
-        fetchSpells();
+        fetchSpells().then(r => {});
     }, []);
 
     return (

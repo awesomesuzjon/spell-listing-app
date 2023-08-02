@@ -4,12 +4,12 @@
 
 
 //module.exports = {
-//  "plugins": ['prettier'],
-//    "extends": ['airbnb', 'prettier'],
+//  "plugins": ["prettier"],
+//    "extends": ["airbnb", "prettier"],
 //  "rules": {
-//    'prettier/prettier': 'error'
+//    "prettier/prettier": "error"
 //  },
 //  "parserOptions": {
-//    './tsconfig.json'
+//    "./tsconfig.json"
 //  }
 //}

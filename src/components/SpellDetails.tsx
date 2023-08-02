@@ -1,19 +1,19 @@
 // src/components/SpellDetails.tsx
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getSpellDetails, Spell } from '../services/api';
+import {getSpellDetails, Spell} from '../services/api';
 
 const SpellDetails: React.FC = () => {
     const { index } = useParams<{ index: string }>();
-    const [spell, setSpell] = useState<Spell | null>(null);
+    const [spell, setSpell] = useState<Spell | any>();
 
     useEffect(() => {
-        // const fetchSpellDetails = async () => {
-        //     const spellDetails = await getSpellDetails(index);
-        //     setSpell(spellDetails);
-        // };
+        const fetchSpellDetails = async () => {
+            const spellDetails = await getSpellDetails(index);
+            setSpell(spellDetails);
+        };
 
-        // fetchSpellDetails();
+        fetchSpellDetails().then(r => {});
     }, [index]);
 
     if (!spell) {
