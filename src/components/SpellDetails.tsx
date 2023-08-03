@@ -1,30 +1,32 @@
-// src/components/SpellDetails.tsx
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import {getSpellDetails, Spell} from '../services/api';
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom'; // Import useParams for getting dynamic URL parameters
+import { getSpellDetails, SpellDetail } from '../services/api'; // Assuming the API functions are in api.ts
 
-const SpellDetails: React.FC = () => {
-    const { index } = useParams<{ index: string }>();
-    const [spell, setSpell] = useState<Spell | any>();
+const SpellDetails = () => {
+    const { spellId } = useParams<{ spellId: string }>(); // Get the dynamic spellId from the URL
+    const [spellDetails, setSpellDetails] = useState<SpellDetail | null>(null);
 
     useEffect(() => {
-        const fetchSpellDetails = async () => {
-            const spellDetails = await getSpellDetails(index);
-            setSpell(spellDetails);
-        };
+        // Fetch the spell details when the component mounts
+        async function fetchSpellDetails() {
+            try {
+                const spellData = await getSpellDetails(spellId!);
+                setSpellDetails(spellData);
+            } catch (error) {
+                console.error('Error fetching spell details:', error);
+            }
+        }
+        fetchSpellDetails().then(() => console.log(spellDetails));
+    }, [spellId]); // Fetch spell details when the spellId changes
 
-        fetchSpellDetails().then(r => {});
-    }, [index]);
-
-    if (!spell) {
+    if (!spellDetails) {
         return <div>Loading...</div>;
     }
 
     return (
-        <div>
-            <h1>{spell.name}</h1>
-            <p>{spell.desc.join(' ')}</p>
-            {/* Add favorite button here */}
+        <div>hello
+            {/*<h1>{spellDetails.name}</h1>*/}
+            {/* Render other spell details here */}
         </div>
     );
 };
