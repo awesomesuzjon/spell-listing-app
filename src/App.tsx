@@ -1,28 +1,17 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import SpellList from "./components/SpellList";
-import '../src/components/styles/appStyles.css'
-import SpellInfo from "./components/SpellInfo";
+import SpellList from './components/SpellList';
+import './components/styles/appStyles.css';
+import SpellInfo from './components/SpellInfo';
 import { Provider } from 'react-redux';
 import store from './redux/store';
-import NavBar from "./components/navComponent/NavBar";
-import Favourites from "./components/Favourites";
-import './App.css'
-import AboutUs from "./components/AboutUs";
+import NavBar from './components/navComponent/NavBar';
+import Favourites from './components/Favourites';
+import './App.css';
+import AboutUs from './components/AboutUs';
 
-const App: React.FC = () => {
-    return (<>
-            <main className={"mainContainer"} >
 
-        <NavBar/>
-            <Content />
-            </main>
-        </>
-        );
-};
-
-const Content: React.FC = () => {
-    return (
+const Content: React.FC = () => (
         <div>
             <Provider store={store}>
             <Routes>
@@ -36,7 +25,16 @@ const Content: React.FC = () => {
             </Provider>
         </div>
 
-    );
-}
+);
+
+const App: React.FC = () => (<>
+        <main className={'mainContainer'} >
+
+            <NavBar/>
+            <Content />
+        </main>
+    </>
+);
+
 
 export default App;

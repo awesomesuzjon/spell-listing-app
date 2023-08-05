@@ -4,23 +4,23 @@ import Logo from '../../assets/Logo.png';
 import '../styles/navStyle.css';
 
 const NavBar: React.FC = () => {
-    const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const [showMobileMenu, setShowMobileMenu] = useState(true);
 
-    const toggleMobileMenu = () => {
-        setShowMobileMenu((prevState) => !prevState);
-    };
+  // const toggleMobileMenu = () => {
+  //     setShowMobileMenu((prevState) => !prevState);
+  // };
 
-    return (
+  return (
         <div id="navbar" className="headerWrapper">
-            <div style={{marginLeft:"3em"}}>
+            <div >
                 <Link onClick={() => window.scrollTo(0, 0)} to="/spells">
                     <img alt="Logo" className="logoImage" src={Logo} style={{ width: '5em' }} />
                 </Link>
             </div>
-            <div className={"listAndBtnDiv"}>
+            <div className={'listAndBtnDiv'}>
 
             <div
-                className={`menuWrap${showMobileMenu ? ' mobileMenuShow' : ''}`}
+                // className={`menuWrap${showMobileMenu ? ' mobileMenuShow' : ''}`}
             >
                 <ul className="menuList">
                     <li className="lastItem">
@@ -40,13 +40,13 @@ const NavBar: React.FC = () => {
                     </li>
                 </ul>
             </div>
-            <button className="mobileMenuButton" onClick={toggleMobileMenu}>
-                ☰
-            </button>
+            {/* <button className="mobileMenuButton" onClick={toggleMobileMenu}> */}
+            {/*    ☰ */}
+            {/* </button> */}
             </div>
 
         </div>
-    );
+  );
 };
 
 export default NavBar;

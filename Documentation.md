@@ -23,7 +23,7 @@ spell-listing-app/
 ├── public/
 ├── package.json
 ├── tsconfig.json
-├── .eslintrc.ts
+├── .eslintrc.bak
 ├── documentation.md
 └── ...
 
