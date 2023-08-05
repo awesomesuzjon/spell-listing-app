@@ -23,7 +23,7 @@ const AboutUs: React.FC = () => {
     <p><span style={{ fontWeight: 'bold' }}>UI Library: </span>Ant Design</p>
     <p><span style={{ fontWeight: 'bold' }}>Test Tool: </span>React Testing Library with Jest</p>
     <p><span style={{ fontWeight: 'bold' }}>API: </span>DnD5eAPI<a href={'http://www.dnd5eapi.co/'}></a></p>
-    <p><span style={{ fontWeight: 'bold' }}>Deployment: </span>Netlify</p>
+    <p><span style={{ fontWeight: 'bold' }}>Deployment: </span>Vercel</p>
     <p><span style={{ fontWeight: 'bold' }}>Version Control: </span>Git</p>
     <p><span style={{ fontWeight: 'bold' }}>Code Editor: WebStrom </span>IDE</p>
                     </>
