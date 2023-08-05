@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import {getSpellDetails, Spell, SpellDetail} from '../services/api';
+import {Card} from "antd";
 
+// get the selected single spell detail from the api
 const SingleSpellDetails: React.FC = () => {
     const { url } = useParams<{ url: string }>();
     const [spell, setSpell] = useState<SpellDetail | null>(null);
@@ -25,10 +27,16 @@ const SingleSpellDetails: React.FC = () => {
 
     return (
         <div>
-            <h1>Name: {spell.name}</h1>
-            <p>Desc: {spell.desc}</p>
-            <p>Level: {spell.level}</p>
-            <p>Duration: {spell.duration}</p>
+            <Card style={{marginTop:"1em"}}>
+
+            <h1><span style={{fontWeight:"bold"}}>Name:</span> {spell.name}</h1>
+            <p style={{width:"50%"}}><span style={{fontWeight:"bold"}}>Desc: </span> {spell.desc}</p>
+            <p><span style={{fontWeight:"bold"}}>Level:</span>  {spell.level}</p>
+            <p><span style={{fontWeight:"bold"}}>Duration:</span>  {spell.duration}</p>
+            <p><span style={{fontWeight:"bold"}}>Range: </span> {spell.range}</p>
+            <p><span style={{fontWeight:"bold"}}>Attack Type: </span> {spell.attack_type}</p>
+            <p><span style={{fontWeight:"bold"}}>Casting Time:</span>  {spell.casting_time}</p>
+            </Card>
 
         </div>
     );

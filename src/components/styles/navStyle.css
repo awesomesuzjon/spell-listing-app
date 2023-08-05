@@ -1,0 +1,239 @@
+
+body {
+    background: #fefefe;
+}
+
+.spellListContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+.header {
+    background-color: #f1f1f1;
+    padding: 30px;
+    text-align: center;
+}
+
+#navbar {
+    overflow: hidden;
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+
+}
+
+#navbar a {
+    float: left;
+    display: block;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+#navbar a:hover {
+    color: gray;
+}
+
+.listAndBtnDiv{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.mobileMenuButton {
+    display: none; /* Hide the button on computer screens */
+}
+
+.content {
+    padding: 16px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 300;
+    background-color: #b71c1c !important;
+}
+
+#navbar a + .sticky {
+    color: #feffe6 !important;
+}
+
+.headerWrapper {
+    background: transparent;
+    width: 100%;
+    padding: 2em 4.28em;
+    display: flex;
+    align-items: center;
+}
+
+
+.menuWrap {
+    list-style-type: none;
+    margin-top: 8px;
+    overflow: hidden;
+    top: 0;
+    margin-left: 3em;
+
+}
+
+
+
+.menuList {
+    color: black !important;
+    font-size: 1px;
+    display: flex;
+    list-style: none;
+
+}
+
+.menuList a {
+    display: block;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    padding: 0 56px 0 12px;
+    text-decoration: none;
+}
+
+.menuList a:hover {
+    opacity: 0.6;
+}
+
+
+@media screen and (max-width: 1100px) {
+
+    .mobileMenuButton {
+        display: none; /* Hide the button on computer screens */
+    }
+
+
+    .headerWrapper{
+        padding:0;
+    }
+
+    .home_two_div {
+        height: 100% !important;
+        grid-template-columns: 45% 55%;
+    }
+
+    .home_first_div {
+        padding: 2em 5em;
+    }
+
+    .mainText {
+        width: 90%;
+    }
+
+    .home-how-it-works {
+        height: 100%;
+        margin: unset;
+    }
+
+    .testimonialData {
+        height: 100%;
+        margin: unset;
+    }
+
+    .common-margin {
+        margin: 7em 5em;
+    }
+
+    #navbar{
+        padding-top:1em;
+    }
+}
+
+/* Media query for mobile screens */
+@media (max-width: 767px) {
+
+    .mobileMenuButton {
+        display: none; /* Hide the button on computer screens */
+    }
+
+
+    .menuList {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .headerWrapper{
+        padding:0;
+    }
+
+    .menuWrap {
+        display: block; /* Hide the full navbar on mobile screens */
+    }
+
+    .mobileMenuShow {
+        display: none; /* Show the mobile menu when active */
+    }
+
+    .mobileMenuButton {
+        display: none; /* Show the mobile menu button on mobile screens */
+        font-size: 1.5em;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        margin-right: 1em;
+    }
+
+    #navbar{
+        padding-top:1em;
+
+    }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 766px) {
+
+    .mobileMenuButton {
+        display: block; /* Hide the button on computer screens */
+        margin: 0;
+        padding: 0;
+    }
+
+    #navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        padding-top:1em;
+
+    }
+
+    .headerWrapper{
+        padding:0;
+    }
+
+    .menuWrap{
+        margin:0;
+        margin-right: 1em;
+    }
+
+    .menuList a{
+        padding: 0;
+    }
+
+    .menuList{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+
+    .listAndBtnDiv{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: start;
+        margin-right: 2em;
+    }
+
+ .menuList   .lastItem{
+        font-size: 0.5em;
+        padding-bottom: 0.5em;
+    }
+
+}

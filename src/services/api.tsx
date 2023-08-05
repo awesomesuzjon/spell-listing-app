@@ -1,6 +1,9 @@
 import axios from 'axios';
 
+// service api of dnde5eapi.co
 const baseURL = 'https://www.dnd5eapi.co/api';
+
+// Defining the Interface for Spell
 
 export interface Spell {
     index: string;
@@ -8,12 +11,7 @@ export interface Spell {
     url: string;
 }
 
-export interface Monster {
-    index: string;
-    name: string;
-    url: string;
-}
-
+// Defining the Interface for SpellDetail
 export interface SpellDetail {
     index: string;
     name: string;
@@ -22,28 +20,12 @@ export interface SpellDetail {
     higher_level: string[];
     duration: string;
     level: number;
+    attack_type: string;
+    range: string;
+    casting_time: string;
 }
 
-export const getMonsters = async (): Promise<Monster[]> => {
-    try {
-        const response = await axios.get(`${baseURL}/monsters`);
-        return response.data.results;
-    } catch (error) {
-        console.error('Error fetching monsters:', error);
-        throw error;
-    }
-};
-
-export const fetchMonsterDetails = async (url: string): Promise<Monster> => {
-    try {
-        const response = await axios.get<Monster>(url);
-        return response.data;
-    } catch (error) {
-        console.error('Error fetching monster details:', error);
-        throw error;
-    }
-};
-
+// fetch the data of spells list from api
 export const getSpells = async (): Promise<Spell[]> => {
     try {
         const response = await axios.get(`${baseURL}/spells`);
@@ -53,6 +35,8 @@ export const getSpells = async (): Promise<Spell[]> => {
         throw error;
     }
 };
+
+// fetch the detail data of selected spell from api
 
 export const getSpellDetails = async (url: string): Promise<SpellDetail> => {
     try {

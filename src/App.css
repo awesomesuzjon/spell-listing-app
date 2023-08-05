@@ -7,10 +7,18 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.ant-pagination-options{
+  display: none;
+}
+
+
+.mainContainer{
+  /*background: rgb(238,174,202);*/
+  /*background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(225,176,206,1) 0%, rgba(219,202,214,1) 5%, rgba(148,187,233,1) 100%);*/
+  width:100%;
+  min-height: 100vh;
+  margin:auto;
+  padding: 1em;
 }
 
 .App-header {
@@ -24,15 +32,36 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+ .spellListGrid{
+  display: grid;
+  grid-template-columns: 2fr;
+  grid-gap: 2em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+/*for mobile screen*/
+@media only screen and (min-device-width: 480px){
+  .mainContainer{
+    width:100%;
+    min-height: 100vh;
   }
-  to {
-    transform: rotate(360deg);
+
+}
+
+@media only screen and (min-width: 600px) {
+  .mainContainer{
+    width:100%;
+    min-height: 100vh;
+  }
+
+}
+
+/*for tablets screen*/
+
+@media only screen and (min-device-width: 768px){
+  .mainContainer{
+    width:100%;
+    min-height: 100vh;
   }
 }
+

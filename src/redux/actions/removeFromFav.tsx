@@ -1,7 +1,6 @@
-// actions/removeFromFav.ts
-import { Spell } from '../../services/api';
-
 export const REMOVE_FROM_FAVORITES = 'REMOVE_FROM_FAVORITES';
+
+// Defining the Interface for RemoveFromFavoritesAction
 
 export interface RemoveFromFavoritesAction {
     type: typeof REMOVE_FROM_FAVORITES;
