@@ -6,6 +6,8 @@ The app fetches spell data from an external API of dnde5,
 displays them in a paginated list, 
 and provides a search feature for users to filter spells by name.`
 
+### Deployed at https://dnde5-spell.vercel.app/
+
 ### Project Structure
 ```
 spell-listing-app/

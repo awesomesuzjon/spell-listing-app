@@ -1,4 +1,3 @@
-// src/components/Favorites.tsx
 import React, { useEffect, useState } from 'react';
 import { List, Skeleton, Tag } from 'antd';
 import { CheckCircleOutlined } from '@ant-design/icons';

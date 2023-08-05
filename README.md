@@ -1,5 +1,6 @@
 ### refer to the Documentation.md file for more information
 
+### Deployed at https://dnde5-spell.vercel.app/
 
 ### To install the project
 ```

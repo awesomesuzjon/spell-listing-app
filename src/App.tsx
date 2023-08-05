@@ -19,7 +19,7 @@ const Content: React.FC = () => (
                 <Route path="/spells" element={<SpellList />} />
                 <Route path="/favorites" element={<Favourites />} />
                 <Route path="/about" element={<AboutUs />} />
-                {/* Use :url to define the dynamic part of the URL */}
+                {/* Using :url to define the dynamic part of the URL */}
                 <Route path="/spells/:url" element={<SpellInfo />} />
             </Routes>
             </Provider>
@@ -29,7 +29,6 @@ const Content: React.FC = () => (
 
 const App: React.FC = () => (<>
         <main className={'mainContainer'} >
-
             <NavBar/>
             <Content />
         </main>

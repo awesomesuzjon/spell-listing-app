@@ -11,13 +11,12 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
 );
 root.render(
-    <Provider store={store}> {/* Wrap the App component with Provider and pass the redux */}
+    // passing redux by wrapping the router with the redux store provider
+    <Provider store={store}>
     <BrowserRouter>
         <App/>
     </BrowserRouter>
     </Provider>,
 );
 
-// If you want to start measuring performance in your app, pass a function
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
