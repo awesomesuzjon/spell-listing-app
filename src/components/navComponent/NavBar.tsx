@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import DndeLogo from '../../assets/dnd2logo.png';
+import Logo from '../../assets/dnd2logo.png';
 import '../styles/navStyle.css';
 
 const NavBar: React.FC = () => {
@@ -14,7 +14,7 @@ const NavBar: React.FC = () => {
         <div id="navbar" className="headerWrapper">
             <div style={{marginLeft:"3em"}}>
                 <Link onClick={() => window.scrollTo(0, 0)} to="/spells">
-                    <img alt="Logo" className="logoImage" src={DndeLogo} style={{ width: '5em' }} />
+                    <img alt="Logo" className="logoImage" src={Logo} style={{ width: '5em' }} />
                 </Link>
             </div>
             <div className={"listAndBtnDiv"}>
