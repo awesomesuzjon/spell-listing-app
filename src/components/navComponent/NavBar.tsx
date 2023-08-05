@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Logo from '../../assets/dnd2logo.png';
+import Logo from '../../assets/Logo.png';
 import '../styles/navStyle.css';
 
 const NavBar: React.FC = () => {
