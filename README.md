@@ -2,7 +2,7 @@
 
 ### Deployed at https://dnde5-spell.vercel.app/
 
-### To install the project
+### To install the   project
 ```
 git clone https://github.com/your-username/spell-listing-app.git
 cd spell-listing-app
