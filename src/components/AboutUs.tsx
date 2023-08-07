@@ -25,7 +25,7 @@ const AboutUs: React.FC = () => {
     <p><span style={{ fontWeight: 'bold' }}>API: </span>DnD5eAPI<a href={'http://www.dnd5eapi.co/'}></a></p>
     <p><span style={{ fontWeight: 'bold' }}>Deployment: </span>Vercel</p>
     <p><span style={{ fontWeight: 'bold' }}>Version Control: </span>Git</p>
-    <p><span style={{ fontWeight: 'bold' }}>Code Editor: WebStrom </span>IDE</p>
+    <p><span style={{ fontWeight: 'bold' }}>Code Editor:  </span>WebStorm IDE</p>
                     </>
 }</div>
         </div>
